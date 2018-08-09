@@ -1,89 +1,77 @@
 
-@import url('https://fonts.googleapis.com/css?family=Merriweather|Montserrat|Source+Sans+Pro');
-
 
 .title {
     font-family: 'arial';
-    color: #9B0992;
-    margin-top: 5%;
-    margin-left: 40%;
+    text-align: center;
 }
 
 .grid {
     border: .150rem solid;
-    padding: 1% 1% 1% 1%;
-    width: 50em;
-    margin-left: 10%;
-    margin-top: 5%;
-    box-sizing: border-box;
+    padding: 3% 2%;
+    margin: auto;
+    height: 30em;
+    width: 900px;
 }
 
-.boxFacebook{
+.box{
+    text-align: left;
     font-size: 1.2em;
+    color: #FFFFFF;
+    float: left;
+    height: 380px;
+    width: 250px;
+    margin: 2.5%;
+}
+
+.box .p{
+    border: 15px solid transparent;
+}
+
+.box-facebook{
     font-family: 'Playfair Display', serif;
-    display: inline-block;
-    color: #FFFFFF;
     background: #0E27CA;
-    border: .125em solid;
-    width: 10em;
-    padding: 2%;
-    text-align: center;
 }
 
-.boxTwitter{
-    font-size: 1.2em;
-
+.box-twitter{
     font-family: 'Nanum Gothic', sans-serif;
-    display: inline-block;
-    color: #FFFFFF;
-    background: #4CB4E7;
-    border: .125em solid;
-    width: 12.7em;
-    padding: 2%;
-    text-align: center;
-    
+    background: #4CB4E7; 
 }
-.boxInstagram{
-    font-size: 1.1em;
+
+.box-instagram{
     font-family: 'Open Sans Condensed', sans-serif;
-    display: inline-block;
-    color: #FFFFFF;
-    background: #E92029;
-    border: .125em solid;
-    width: 12em;
-    padding: 2%;
-    text-align: center;
-    
+    background: #8E4100; 
 }
 
-.contenedor {
-  position: relative;
-  float: center;
-    width: 59px;
-    height: 56px;
-    display:block;
-    margin:auto;
+.sprite {
+    width: 51px;
+    height: 51px;
+    margin: auto;
+    border-radius: 60%;
 }
 
-.contenedor img {
-  position: absolute;
-  left: 0;
-  transition: opacity 0.5s ease-in-out;
+.sprite-facebook{
+    background: url('imgs/social-media-icons-css-sprite.png') no-repeat -60px -62px;
+    margin-top: 50px;
 }
 
-.contenedor img.top:hover {
-  opacity: 0;
+.sprite-twitter{
+    background: url('imgs/social-media-icons-css-sprite.png') no-repeat -3px -62px;
+    margin-top: 10px;
 }
 
-@media  screen and (max-width: 750px){
-    .boxInstagram{
-        background: #782740;
-    }
-    .boxFacebook{
-        background: #27782d;
-    }
-    .boxTwitter{
-        background: #f42929;
-    }
+.sprite-instagram{
+    background: url('imgs/social-media-icons-css-sprite.png') no-repeat -117px -62px;
+    margin-top: 0.5px;
 }
 
+.sprite-facebook:hover{
+    background: url('imgs/social-media-icons-css-sprite.png') no-repeat -60px -5px;
+}
+
+.sprite-twitter:hover{
+    background: url('imgs/social-media-icons-css-sprite.png') no-repeat -3px -5px;
+}
+
+.sprite-instagram:hover{
+    background: url('imgs/social-media-icons-css-sprite.png') no-repeat -117px -5px;
+}
