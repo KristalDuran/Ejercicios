@@ -1,21 +1,89 @@
-.body{
-  font-size: 14px;
-  line-height: 1.428;
-  text-align: justify;
-}
-.small{
-  color: #FFFFFF;
-}
 
-.h1{
-  
-  margin-left: 200px;
+@import url('https://fonts.googleapis.com/css?family=Merriweather|Montserrat|Source+Sans+Pro');
+
+
+.title {
+    font-family: 'arial';
+    color: #9B0992;
+    margin-top: 5%;
+    margin-left: 40%;
 }
 
-.row{
-
+.grid {
+    border: .150rem solid;
+    padding: 1% 1% 1% 1%;
+    width: 50em;
+    margin-left: 10%;
+    margin-top: 5%;
+    box-sizing: border-box;
 }
 
-.col{
-
+.boxFacebook{
+    font-size: 1.2em;
+    font-family: 'Playfair Display', serif;
+    display: inline-block;
+    color: #FFFFFF;
+    background: #0E27CA;
+    border: .125em solid;
+    width: 10em;
+    padding: 2%;
+    text-align: center;
 }
+
+.boxTwitter{
+    font-size: 1.2em;
+
+    font-family: 'Nanum Gothic', sans-serif;
+    display: inline-block;
+    color: #FFFFFF;
+    background: #4CB4E7;
+    border: .125em solid;
+    width: 12.7em;
+    padding: 2%;
+    text-align: center;
+    
+}
+.boxInstagram{
+    font-size: 1.1em;
+    font-family: 'Open Sans Condensed', sans-serif;
+    display: inline-block;
+    color: #FFFFFF;
+    background: #E92029;
+    border: .125em solid;
+    width: 12em;
+    padding: 2%;
+    text-align: center;
+    
+}
+
+.contenedor {
+  position: relative;
+  float: center;
+    width: 59px;
+    height: 56px;
+    display:block;
+    margin:auto;
+}
+
+.contenedor img {
+  position: absolute;
+  left: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.contenedor img.top:hover {
+  opacity: 0;
+}
+
+@media  screen and (max-width: 750px){
+    .boxInstagram{
+        background: #782740;
+    }
+    .boxFacebook{
+        background: #27782d;
+    }
+    .boxTwitter{
+        background: #f42929;
+    }
+}
+
