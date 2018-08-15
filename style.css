@@ -1,26 +1,28 @@
 
-
 .title {
     font-family: 'arial';
     text-align: center;
 }
 
-.grid {
-    border: .150rem solid;
-    padding: 3% 2%;
+.body{
+    padding: 4%;
+}
+
+.container {
+    border: .200rem solid;
+    padding: 4%;
     margin: auto;
-    height: 30em;
-    width: 900px;
+    height: 100%;
+    width: 90%;
 }
 
 .box{
     text-align: left;
     font-size: 1.2em;
     color: #FFFFFF;
-    float: left;
-    height: 380px;
+    height: 370px;
     width: 250px;
-    margin: 2.5%;
+    margin: 2%;
 }
 
 .box .p{
@@ -51,17 +53,17 @@
 
 .sprite-facebook{
     background: url('imgs/social-media-icons-css-sprite.png') no-repeat -60px -62px;
-    margin-top: 50px;
+    margin-top: 90px;
 }
 
 .sprite-twitter{
     background: url('imgs/social-media-icons-css-sprite.png') no-repeat -3px -62px;
-    margin-top: 10px;
+    margin-top: 15px;
 }
 
 .sprite-instagram{
     background: url('imgs/social-media-icons-css-sprite.png') no-repeat -117px -62px;
-    margin-top: 0.5px;
+    margin-top: 65px;
 }
 
 .sprite-facebook:hover{
@@ -74,4 +76,19 @@
 
 .sprite-instagram:hover{
     background: url('imgs/social-media-icons-css-sprite.png') no-repeat -117px -5px;
+}
+
+@media (max-width: 600px) and (max-height: 700px){
+    .box-facebook{
+        background: #27782d;
+    }
+
+    .box-twitter{
+        background: #f42929;
+    }
+
+    .box-instagram{
+        background: #782740;
+    }
+
 }
