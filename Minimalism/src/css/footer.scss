@@ -1,0 +1,32 @@
+$background-black: black;
+$text-gray: #575757;
+$text-black: black;
+$text-gray-light: #a5a5a5;
+
+footer{
+    position: relative;
+    height: 90px;
+    clear: both;
+    width: 100%;
+    background-color: $background-black;
+}
+
+.footer{
+    position: absolute;
+    top: 25px;
+    color: $text-gray-light;
+    font-size: 14px;
+    &__dates{
+        right: 225px;
+    }
+    &__description{
+        left: 225px;
+        .link{
+            color: $text-gray;
+        }
+        .link:hover{
+            font-size: 18px;
+            color: $text-gray-light;
+        }
+    }
+}

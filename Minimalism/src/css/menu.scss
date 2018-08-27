@@ -1,0 +1,43 @@
+
+$text-gray: #575757;
+$text-gray-light: #a5a5a5;
+$borders-color: #C8C8C8;
+
+.menu{
+    margin-right: 3.8%;
+    float: left;
+    min-height: 1px;
+}
+
+.menu__nav{
+    position: absolute;
+    width: 540px;
+    top: 15px;
+    right: 5px;
+}
+
+.menu__items{
+    list-style: none;        
+}
+
+.menu__items--item{
+    margin-left: 12px;
+    line-height: normal;
+} 
+
+.menu__items--item-select{
+    font-size: 17px;
+    color: $text-gray;
+    font-weight: normal;
+    display: block;
+    padding-bottom: 10px;
+    padding-top: 5px;
+    background-color: transparent;
+    margin-top: 1px;
+    margin-right: 6px;
+    text-decoration: none;
+}
+
+.menu__items--item-select:hover{
+    color: $text-gray-light;
+} 

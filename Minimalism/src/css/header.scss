@@ -1,0 +1,30 @@
+$borders-color: #C8C8C8;
+$text-red: #eb2f0e;
+$text-gray: #575757;
+$text-black: black;
+
+header{
+    position: relative;
+    float: left;
+    width: 100%;
+    height: 100px;
+}
+
+.logo{
+    position: relative;
+    float: left;
+    left: 0px;
+    top: 34px;
+    font-size: 30px;
+    text-decoration: none;
+    color: $text-red;
+}
+
+.dowload{
+    text-decoration: underline;
+    color: $text-gray;
+}
+
+.dowload:hover{
+    color: $text-black;
+}

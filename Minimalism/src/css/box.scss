@@ -1,0 +1,42 @@
+$button-color: black;
+$text-color-button: white;
+$text-red: #eb2f0e;
+
+.box{
+    display: flex;
+    flex-flow: column wrap;
+
+    &__title{
+        color: $text-red;
+        font-size: 22px;
+        margin-bottom: 6px;
+        font-weight: 600;
+    }
+    &__tex{ 
+        font-size: 13px;
+    }
+    &__button{
+        left: 0;
+    }
+
+}
+
+.picture{
+    background-color: white;
+    border: 1px solid #D6D6D6;
+    position: relative;
+    float: left;
+    margin: 16px 13px 8px 0;
+    padding: 8px;
+}
+
+.picture:hover{
+    background-color: transparent;
+}
+
+.boxs{
+    display: flex;
+    justify-content: flex-start;
+    flex-flow: row;
+    width: 40%;
+}

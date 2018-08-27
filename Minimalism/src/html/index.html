@@ -4,68 +4,125 @@
     <meta charset="utf-8">
     <title>Minimalism</title>
     <link rel="stylesheet" href="main.css" />
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
-
+    <link rel="stylesheet" media="max-width: 600px" href="main.css" />
 </head>
 <body>
-    <header class="header">
-        <div class="row">
-            <h3 class="title" href="">Minimalism.</h3>
-            <nav class="nav-menu container">
-                <ul class="nav-menu-items container">
-                    
-                    <li class="nav-menu-item nav-menu-item_simple container"><a href="#">Contact</a></li>
-                    <li class="nav-menu-item nav-menu-item_simple container"><a href="#">News</a></li>
-                    <li class="nav-menu-item nav-menu-item_simple container"><a href="#">Portfolio</a></li>
-                    <li class="nav-menu-item nav-menu-item_simple container"><a href="#">Services</a></li>
-                    <li class="nav-menu-item nav-menu-item_simple container"><a href="#">About us</a></li>
-                    <li class="nav-menu-item nav-menu-item_simple container"><a href="#">Home</a></li>                 
-                </ul>
-            </nav>
-        </div>
-    </header>
-    <div class="container">
-        
-        
-        <div class="citas">
-            <p class="cita">"Simplicity is the ultimate sophistication."-<p class="referens">Leonardo da Vinci</p></p>
-            
-            <p>In character, in manner, in style, in all things, the supreme excellence is simplicity.<a href="">Download the template</a></p>
-        </div>
-
-         
-        
-
-        <div class="row">
-            <div class="col">
-                <h3 class="title titleColm">About us</h3>
-                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. 
-                    Donec molestie. Sed aliquam sem ut arcu. 
-                    Phasellus sollicitudin. 
-                    Vestibulum condimentum facilisis nulla. 
-                    In hac habitasse platea dictumst. Nulla nonummy.</p>
-                <a class="readMore" href="">Read more</a>
+    <div class="background">
+        <div class="container">   
+            <div class="row">
+                <header class="">
+                    <h1 class="logo" href="#">Minimalism.</h1>
+                    <div class="menu">
+                        <nav class="menu__nav">
+                            <ul class="menu__items">
+                                <li class="menu__items--item"><a class="menu__items--item-select" href="#">Home</a></li>
+                                <li class="menu__items--item"><a class="menu__items--item-select" href="#">About us</a></li>
+                                <li class="menu__items--item"><a class="menu__items--item-select" href="#">Services</a></li>
+                                <li class="menu__items--item"><a class="menu__items--item-select" href="#">Portfolio</a></li>
+                                <li class="menu__items--item"><a class="menu__items--item-select" href="#">News</a></li>
+                                <li class="menu__items--item"><a class="menu__items--item-select" href="#">Contact</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </header>
             </div>
-            <div>
-                <h3 class="title titleColm">Services</h3>
-                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. 
-                    Donec molestie. Sed aliquam sem ut arcu. 
-                    Phasellus sollicitudin. 
-                    Vestibulum condimentum facilisis nulla. 
-                    In hac habitasse platea dictumst. Nulla nonummy.</p>
-                <a class="readMore" href="">Read more</a>
+        </div> 
+        <div class="container">
+            <div class="row">
+                <section>
+                    <h1 class="title titlePrincipal">"Simplicity is the ultimate sophistication."<span>-Leonardo da Vinci</span></h1>
+                    <p class="title">In character, in manner, in style, in all things, the supreme excellence is simplicity.
+                        <a class="dowload" href="">Download the template</a></p>
+                </section>
+                <p></p>
+            </div> 
+            <div class="row boxs">
+                <div class="box">
+                    <h3 class="box__title">About us</h3>
+                    <p class="box__tex">Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                        Integer purus risus, dapibus euismod semper vel, imperdiet sit amet massa. 
+                        Sed venenatis faucibus ex sit amet pulvinar. Aliquam fermentum lacus libero, 
+                        at rutrum mauris posuere non. Sed tempor fermentum arcu, at viverra nulla varius sed. 
+                        Proin mattis dapibus pretium. Curabitur faucibus urna eu massa hendrerit, ac accumsan 
+                        est commodo. Donec sed erat quis augue ultrices ultrices in aliquam sem. 
+                        Phasellus ac.</p>
+                    <a class="picture" href="#">
+                        <img src="/images/boy.jpg" width="343" height="305" alt="picture1">
+                    </a>
+                    <button class="box__button button" >Read more</button>
+                </div>   
+                <div class="box">
+                    <h3 class="box__title">Services</h3>
+                    <p class="box__tex">Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                        Integer purus risus, dapibus euismod semper vel, imperdiet sit amet massa. 
+                        Sed venenatis faucibus ex sit amet pulvinar. Aliquam fermentum lacus libero, 
+                        at rutrum mauris posuere non. Sed tempor fermentum arcu, at viverra nulla varius sed. 
+                        Proin mattis dapibus pretium. Curabitur faucibus urna eu massa hendrerit, ac accumsan 
+                        est commodo. Donec sed erat quis augue ultrices ultrices in aliquam sem. 
+                        Phasellus ac.</p>
+                    <a class="picture" href="#">
+                        <img src="/images/flower.jpg" width="343" height="305" alt="picture1">
+                    </a>
+                    <button class="box__button button" >Read more</button>
+                </div>
+                <div class="box">
+                    <h3 class="box__title">Latest news</h3>
+                    <p class="box__tex">Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                        Integer purus risus, dapibus euismod semper vel, imperdiet sit amet massa. 
+                        Sed venenatis faucibus ex sit amet pulvinar. Aliquam fermentum lacus libero, 
+                        at rutrum mauris posuere non. Sed tempor fermentum arcu, at viverra nulla varius sed. 
+                        Proin mattis dapibus pretium. Curabitur faucibus urna eu massa hendrerit, ac accumsan 
+                        est commodo. Donec sed erat quis augue ultrices ultrices in aliquam sem. 
+                        Phasellus ac.</p>
+                    <a class="picture" href="#">
+                        <img src="/images/girl.jpg" width="343" height="305" alt="picture1">
+                    </a>
+                    <button class="box__button button">Read more</button>
+                </div>
             </div>
-            <div>
-                <h3 class="title titleColm">Latest news</h3>
-                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. 
-                    Donec molestie. Sed aliquam sem ut arcu. 
-                    Phasellus sollicitudin. 
-                    Vestibulum condimentum facilisis nulla. 
-                    In hac habitasse platea dictumst. Nulla nonummy.</p>
-                <a class="readMore" href="">Read more</a>
+            <div class="row">
+                <div class="paragraph">
+                    <h4 class="paragraph__title">Latest article</h4>
+                    <a class="paragraph__date">21.08.2018 - Design is how it works</a>
+                    <p class="paragraph__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                        Integer purus risus, dapibus euismod semper vel, imperdiet sit amet massa. 
+                        Sed venenatis faucibus ex sit amet pulvinar. Aliquam fermentum lacus libero, 
+                        at rutrum mauris posuere non. Sed tempor fermentum arcu, at viverra nulla varius sed. 
+                        Proin mattis dapibus pretium. Curabitur faucibus urna eu massa hendrerit, ac accumsan 
+                        est commodo. Donec sed erat quis augue ultrices ultrices in aliquam sem. 
+                        Phasellus ac.</p>
+                    <blockquote class="pulledquote">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                        Integer purus risus, dapibus euismod semper vel, imperdiet sit amet massa. 
+                        Sed venenatis faucibus ex sit amet pulvinar. Aliquam fermentum lacus libero, 
+                        at rutrum mauris posuere non. Sed tempor fermentum arcu, at viverra nulla varius sed. 
+                        Proin mattis dapibus pretium. Curabitur faucibus urna eu massa hendrerit, ac accumsan 
+                        est commodo. Donec sed erat quis augue ultrices ultrices in aliquam sem. 
+                        Phasellus ac.</p>
+                    </blockquote>
+                    <p class="paragraph__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                        Integer purus risus, dapibus euismod semper vel, imperdiet sit amet massa. 
+                        Sed venenatis faucibus ex sit amet pulvinar. Aliquam fermentum lacus libero, 
+                        at rutrum mauris posuere non. Sed tempor fermentum arcu, at viverra nulla varius sed. 
+                        Proin mattis dapibus pretium. Curabitur faucibus urna eu massa hendrerit, ac accumsan 
+                        est commodo. Donec sed erat quis augue ultrices ultrices in aliquam sem. 
+                        Phasellus ac.</p>                
+                </div>
             </div>
         </div>
-    </div>
+        <footer>
+            <div class="container">
+                <div class="footer">
+                    <div class="footer__dates">
+                        © 2018 Minimalism
+                    </div>
+                    <div class="footer__description">
+                            Responsive design by <a class="link" href="">Kristal Duran</a> using sass and BEM
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>      
 </body>
 
 </html>
