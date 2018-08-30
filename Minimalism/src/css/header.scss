@@ -1,9 +1,6 @@
-$borders-color: #C8C8C8;
-$text-red: #eb2f0e;
-$text-gray: #575757;
-$text-black: black;
+@import "colors";
 
-header{
+.header{
     position: relative;
     float: left;
     width: 100%;
@@ -20,11 +17,8 @@ header{
     color: $text-red;
 }
 
-.dowload{
-    text-decoration: underline;
-    color: $text-gray;
-}
-
-.dowload:hover{
-    color: $text-black;
+@media screen and (max-width: 480px){
+    .logo{
+        left: 15px;
+    }
 }

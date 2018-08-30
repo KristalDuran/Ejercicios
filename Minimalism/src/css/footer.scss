@@ -1,18 +1,13 @@
-$background-black: black;
-$text-gray: #575757;
-$text-black: black;
-$text-gray-light: #a5a5a5;
+@import "colors";
 
-footer{
+.footer{
     position: relative;
     height: 90px;
     clear: both;
-    width: 100%;
     background-color: $background-black;
-}
-
-.footer{
-    position: absolute;
+    padding-left: 40px;
+    padding-right: 30px;
+    padding-top: 10px;
     top: 25px;
     color: $text-gray-light;
     font-size: 14px;
@@ -21,10 +16,10 @@ footer{
     }
     &__description{
         left: 225px;
-        .link{
-            color: $text-gray;
-        }
-        .link:hover{
+    }
+    &__link{
+        color: $text-gray;
+        &:hover{
             font-size: 18px;
             color: $text-gray-light;
         }

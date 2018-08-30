@@ -1,9 +1,7 @@
-$text-red: #eb2f0e;
-$text-black: black;
-$borders-color: #C8C8C8;
+@import "colors";
 
 .pulledquote{
-    background: #ededed;
+    background: $background-withe;
     border: 1px solid $borders-color;
     color: $text-red;
     margin-top: 20px;
@@ -19,10 +17,7 @@ $borders-color: #C8C8C8;
     background: transparent;
     margin-top: 5px;
     border-top: 1px solid $borders-color;
-    &__text{
-        position: relative;
-        float: left;
-    }
+    
     &__date{
         color: $text-black;
     }
@@ -34,8 +29,31 @@ $borders-color: #C8C8C8;
     }
 }
 
-.title{
+.main{
     text-align: left;
     line-height: 1.3em;
     padding-bottom: 5px;
+    
+    &__dowload{
+        text-decoration: underline;
+        color: $text-gray;
+        &:hover{
+            color: $text-black;
+        }
+    }
+}
+@media screen and (max-width: 480px){
+    .main{
+        &__title{
+            margin-top: 400px;
+            font-size: 35px;
+            line-height: 40px;
+        }
+        &__blockquote{
+            font-size: 22px;
+        }
+        &__dowload{
+            font-size: 20px;
+        }
+    }
 }

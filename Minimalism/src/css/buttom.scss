@@ -1,12 +1,10 @@
-$button-color: black;
-$text-color-button: white;
+@import "colors";
 
 .button{
-    background-color: $button-color;
+    background: $button-color;
     color: $text-color-button;
     margin-top: 14px;
     text-align: center;
-    font: 14px/100%;
     border-radius: 5px;
     padding: 12px 18px;
     font-size: 1em;
