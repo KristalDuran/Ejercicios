@@ -24,53 +24,53 @@ class Pokemon{
 }
 
 function defineEffectiveness(typeFirstPokemon, typeSecondPokemon){
-    valueEffentiveness = 0;
-    switch (typeFirstPokemon){
-        case "fire":
+    var valueEffentiveness = {
+        "fire": function (){
             if(typeSecondPokemon === "grass"){
-                valueEffentiveness = 2;
+                return 2;
             }else if(typeSecondPokemon === "water"){
-                valueEffentiveness = 0.5;
+                return 0.5;
             }else if(typeSecondPokemon === "electric"){
-                valueEffentiveness = 1;
+                return 1;
             }else{
-                valueEffentiveness = 0.5;
+                return 0.5;
             }
-        return valueEffentiveness;
-        case "grass":
+        },
+        "grass": function (){
             if(typeSecondPokemon === "fire"){
-                valueEffentiveness = 0.5;
+                return 0.5;
             }else if(typeSecondPokemon === "water"){
-                valueEffentiveness = 2;
+                return 2;
             }else if(typeSecondPokemon === "electric"){
-                valueEffentiveness = 1;
+                return 1;
             }else{
-                valueEffentiveness = 0.5;
+                return 0.5;
             }
-        return valueEffentiveness;
-        case "water":
+        },
+        "water": function (){
             if(typeSecondPokemon === "grass"){
-                valueEffentiveness = 0.5;
+                return 0.5;
             }else if(typeSecondPokemon === "fire"){
-                valueEffentiveness = 2;
+                return 2;
             }else if(typeSecondPokemon === "electric"){
-                valueEffentiveness = 0.5;
+                return 0.5;
             }else{
-                valueEffentiveness = 0.5;
+                return 0.5;
             }
-        return valueEffentiveness;
-        case "electric":
+        },
+        "electric": function (){
             if(typeSecondPokemon === "grass"){
-                valueEffentiveness = 1;
+                return 1;
             }else if(typeSecondPokemon === "water"){
-                valueEffentiveness = 2;
+                return 2;
             }else if(typeSecondPokemon === "fire"){
-                valueEffentiveness = 1;
+                return 1;
             }else{
-                valueEffentiveness = 0.5;
+                return 0.5;
             }
-        return valueEffentiveness;
-    }
+        }
+    };
+    return valueEffentiveness[typeFirstPokemon]();
 }
 
 function damage(pokemon1, pokemon2){
