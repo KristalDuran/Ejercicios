@@ -16,16 +16,16 @@
     &__item{
         margin-left: 12px;
         line-height: normal;
+        &--select{
+            font-size: 17px;
+            color: $text-gray;
+            margin-right: 6px;
+            text-decoration: none;
+            &:hover{
+                color: $text-gray-light;
+            } 
+        }
     } 
-    &__item--select{
-        font-size: 17px;
-        color: $text-gray;
-        margin-right: 6px;
-        text-decoration: none;
-        &:hover{
-            color: $text-gray-light;
-        } 
-    }
 }
 
 @media screen and (min-width: 480px) {
