@@ -1,0 +1,24 @@
+@import "colors";
+
+.header{
+    position: relative;
+    float: left;
+    width: 100%;
+    height: 100px;
+}
+
+.logo{
+    position: relative;
+    float: left;
+    left: 0px;
+    top: 34px;
+    font-size: 30px;
+    text-decoration: none;
+    color: $text-red;
+}
+
+@media screen and (max-width: 480px){
+    .logo{
+        left: 15px;
+    }
+}

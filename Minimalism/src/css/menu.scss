@@ -1,0 +1,62 @@
+@import "colors";
+
+.menu{
+    margin-right: 3.8%;
+    float: left;
+    min-height: 1px;
+    &__nav{
+        position: absolute;
+        width: 540px;
+        top: 15px;
+        right: 5px;
+    }
+    &__items{
+        list-style: none;        
+    }
+    &__item{
+        margin-left: 12px;
+        line-height: normal;
+        &--select{
+            font-size: 17px;
+            color: $text-gray;
+            margin-right: 6px;
+            text-decoration: none;
+            &:hover{
+                color: $text-gray-light;
+            } 
+        }
+    } 
+}
+
+@media screen and (min-width: 480px) {
+    .menu{
+        &__item{
+            float: left;
+        }
+        &__nav{
+            border-top: 1px solid $borders-color;
+            border-bottom: 1px solid $borders-color;
+        }
+    }
+}
+
+@media screen and (max-width: 480px){
+    .menu{
+        &__nav{
+            margin-top: 80px;
+            left: 20px;
+            border-top: none;
+            border-bottom: none
+        }
+        &__items{
+            padding: 0px;
+            margin: 0px;
+        }
+
+        &__item{
+            float: none;
+            border-bottom: 1px solid $borders-color;
+            font-size: 40px;
+        }
+    }
+}

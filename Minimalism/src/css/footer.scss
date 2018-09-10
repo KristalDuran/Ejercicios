@@ -1,0 +1,27 @@
+@import "colors";
+
+.footer{
+    position: relative;
+    height: 90px;
+    clear: both;
+    background-color: $background-black;
+    padding-left: 40px;
+    padding-right: 30px;
+    padding-top: 10px;
+    top: 25px;
+    color: $text-gray-light;
+    font-size: 14px;
+    &__dates{
+        right: 225px;
+    }
+    &__description{
+        left: 225px;
+    }
+    &__link{
+        color: $text-gray;
+        &:hover{
+            font-size: 18px;
+            color: $text-gray-light;
+        }
+    }
+}

@@ -1,0 +1,56 @@
+@import "colors";
+
+.box{
+    display: flex;
+    flex-flow: column wrap;
+    padding-right: 20px;
+    &__title{
+        color: $text-red;
+        font-size: 22px;
+        margin-bottom: 6px;
+        font-weight: 600;
+    }
+    &__tex{ 
+        font-size: 13px;
+    }
+    &__button{
+        left: 0;
+    }
+
+}
+
+.picture{
+    background: $background-withe;
+    border: 1px solid $borders-color;
+    margin: 16px 13px 8px 0;
+    padding: 8px;
+    &:hover{
+        background-color: transparent;
+    }
+}
+
+
+.boxs{
+    display: flex;
+    justify-content: flex-start;
+    flex-flow: row;
+    width: 40%;
+}
+
+@media screen and (max-width: 480px){
+    .boxs{
+        flex-flow: column wrap;
+    }
+
+    .box{
+        &__title{
+            font-size: 25px;
+            font-weight: 600px;
+        }
+        &__tex{ 
+            font-size: 18px;
+            width: 400px;
+        }
+        
+    }
+}
