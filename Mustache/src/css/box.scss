@@ -1,0 +1,40 @@
+@import "color.scss";
+
+.box{
+    width: 360px;
+    height: 242px;
+    margin: 5%;
+    &__container{
+        margin: 3%;
+        
+        &__i{
+            margin-top: 5%;
+            display: flex;
+            flex-flow: row;
+        }
+        &__j{
+            margin-top: 5%;
+            display: flex;
+            flex-flow: row;
+        }
+    }
+    &__title{
+        border-bottom: 1px solid $borders-color;
+    }
+    &__picture{
+        width: 126px;
+        height: 117px;
+    }
+    &____price{
+    }
+    &__text{
+    }
+    &__button{
+        background: $background-black;
+        width: 156px;
+        height: 34px;
+        border-radius: 18px;
+        text-align: center;
+        color: $text-white;     
+    }
+}
