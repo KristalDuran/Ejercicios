@@ -1,33 +1,71 @@
-
-@import "color.scss";
+@import "colors";
 
 .seeker{
+    left: 60px;
 
-    &__picture{
-        margin: 0;
+    &__image{
         width: 100%;
-        height: 550px;
+        height: 500px;
     }
     &__title{
         position: absolute;
-        font-family: Arial, Helvetica, sans-serif;
-        font-style: bold;
-        font-size: 26px;
         left: 92px;
         top: 306px;
+        font-size: 36px;
         color: $text-white;
     }
     &__input{
-        position: absolute;
-        margin-top: 1%;
-        left: 95px;
-        top: 382px;
-        width: 538px;
-        height: 44px;
-        border-radius: 20px;    
-        color: $text-gray;
+        left: 120px;
+        top: 394px;
+        font-family: Arial, Helvetica, sans-serif;
         font-size: 18px;
-        padding: 5px;
+        padding-left: 10px;
+        position: absolute;
+        border-radius: 20px;
+        width: 458px;
+        height: 44px;
     }
 }
 
+@media screen and (max-width: 768px){
+    .seeker{
+        &__image{
+            height: 428px;
+            background-image: url(/images/banner.png);
+        }
+        &__title{
+            left: 8px;
+        }
+        &__input{
+            width: 350px;
+            left: 10px;
+            margin-top: 5%;
+        }
+    }
+}
+
+@media screen and (max-width: 360px){
+    .seeker{
+        left: 0;
+        position: relative;
+        &__image{
+            background-image: url(/images/banner-mobile.png);
+            height: 304px;
+        }
+        &__title{
+            left: 27px;
+            top: 396px;
+            color: $text-black;
+            font-size: 24px;
+            width: 238px;
+            height: 56px;
+            margin-bottom: 5px;
+        }
+        &__input{
+            margin-top: 10px;
+            left: 10px;
+            top: 467px;
+            width: 303px;
+        }
+    }
+}

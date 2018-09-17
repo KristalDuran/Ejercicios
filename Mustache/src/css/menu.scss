@@ -1,21 +1,90 @@
-@import "color.scss";
+@import "colors";
 
 .menu{
-    position: relative;
-    background: $background-black;
-    width: 100%;
-    height: 15%;
-    display: flex;
-    flex-flow: column;
+    margin-right: 3.8%;
+    float: left;
+    min-height: 1px;
+    &__nav{
+        position: absolute;
+        width: 540px;
+        top: 15px;
+        right: 5px;
+    }
     &__items{
-        
+        list-style: none;        
     }
     &__item{
-        margin-right: 20px;
-        text-align: right;
-        list-style: none;
-        color: $text-white;
-        font-size: 20px;
-        padding: 0.4%;
+        margin-left: 12px;
+        line-height: normal;
+        &--select{
+            font-size: 17px;
+            color: $text-white;
+            margin-right: 6px;
+            text-decoration: none;
+            &:hover{
+                color: $text-purple;
+            } 
+        }
+        &--first{
+            border-bottom: 5px solid $border-white;
+            padding-bottom: 2px;
+        }
+        &--last{
+            margin-left: 60px;
+            
+        }
+    } 
+}
+
+@media screen and (min-width: 480px) {
+    .menu{
+        &__item{
+            float: left;
+        }
+        
     }
+}
+
+@media screen and (max-width: 768px){
+    .menu{
+        &__items{
+            display: none;
+        }
+        &__figure{
+            display: block;
+            position: relative;
+            margin-left: 80%;
+            &--first{
+                position: absolute;
+                background: $border-white;
+                width: 53px;
+                height: 9px;
+                top: 0px;
+            }
+            &--second{
+                position: absolute;
+                background: $border-white;
+                width: 53px;
+                height: 9px;
+                top: 15px;
+            }
+            &--third{
+                position: absolute;
+                background: $border-white;
+                width: 53px;
+                height: 9px;
+                top: 30px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 480px){
+    .menu{
+        &__items{
+            display: none;
+        }
+        
+    }
+    
 }

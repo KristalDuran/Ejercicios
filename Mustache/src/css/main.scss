@@ -1,9 +1,20 @@
-.body{
+@import "colors";
+
+.page{
     margin: 0;
-    margin-top: 0;
-    margin-bottom: 0;
+    width: 100%;
 }
 
 .container{
-    margin: 10%;
+    margin: 2%;
+    display: flex;
+    flex-wrap: wrap;  
+}
+
+@media screen and (max-width: 360px){
+    .container{
+        position: relative;
+        top: 128px;
+        margin-bottom: 150px;
+    }
 }

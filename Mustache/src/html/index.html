@@ -1,56 +1,134 @@
 <!DOCTYPE html>
-    <head>
-        <meta charset="utf-8">
-        <title>Agentes de seguridad</title>
-        <link rel="stylesheet" href="main.css" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />    
-        <script type="text/x-handlebars-template" id="template"></script>
-    </head>
-    <body class="body">
-        <div class="background">
-            <header class="header">
-                <div class="header__logo">
+<head>
+    <meta charset="utf-8">
+    <title>Agentes</title>
+    <link rel="stylesheet" href="main.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />    
+</head>
+<body class="page">
+    <header class="header">
+        <img class="header__logo" src="/images/logo.png">
+        <div class="menu">
+            <nav class="menu__nav">
+                <ul class="menu__items">
+                    <li class="menu__item"><a class="menu__item--select menu__item--first " href="#">Directorio de Agentes</a></li>
+                    <li class="menu__item"><a class="menu__item--select" href="#">Contacto</a></li>
+                    <li class="menu__item"><a class="menu__item--select menu__item--last" href="#">Ingresar</a></li>
+                </ul>
+                <ul class="menu__figure">
+                    <li class="menu__figure--first"></li>
+                    <li class="menu__figure--second"></li>
+                    <li class="menu__figure--third"></li>
+                </ul>
+            </nav>
+        </div>
+    </header>       
+    <div class="seeker">
+        <img class="seeker__image" src="/images/banner.png">
+        <h1 class="seeker__title">Los Mejores agentes de seguridad</h1>
+        <input class="seeker__input" placeholder="Buscar por Ubicación">
+    </div> 
+    <div class="container" id="p">
+        
+    </div>       
+    <footer class="footer">
+        <div class="footer__author"> 
+            Desarrollado por Akurey.com|Todos los derechos reservados
+        </div>
+        <a class="footer__link" href="">Términos y Condiciones</a>
+    </footer>   
+
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.3.2/mustache.min.js"></script>
+
+    <script type="text/x-handlebars-template" id="template">
+        {{#companies}}
+            <div class="box">
+                <div class="box__container-header">
+                    {{#isCertified}}
+                    <img class="box__logo" src="/images/certified.png">
+                    {{/isCertified}}
+                    <h3 class="box__title">{{name}}</h3>
                 </div>
-                <div class="menu">
-                    <nav>
-                        <ul class="menu_items">
-                            <li class="menu__item">Director de Agentes</li>
-                            <li class="menu__item">Contacto</li>
-                            <li class="menu__item">Ingresar</li>
-                        </ul>
-                    </nav>
-                </div>
-            </header> 
-                <div class="seeker">
-                    <img class="seeker__picture" src="/images/banner.png">
-                    <div class="seeker__title">
-                        <h2>Los mejores agentes de seguridad</h2>
+                <div class="box__se">
+                    <div class="box__container1">
+                        <img class="box__picture" src="{{image}}">
+                        <p class="box__price">Desde: {{rate}} / {{hours}} horas</p>
                     </div>
-                    <input class="seeker__input" placeholder="Buscar por Ubicación">
-                </div>
-            <div class="container">
-                <div class="box">
-                    <div class="box__container">
-                        <h3 class="box__title">title</h3>
-                        <div class="box__container__i">
-                            <img class="box__picture" src="/images/banner.png">
-                            <p class="box__text">text</p>
-                        </div>
-                        <div class="box__container__j">
-                                <p class="box__price">price</p>
-                            <div class="box__button">Contratar</div>
-                        </div>
+                    <div>
+                        <p class="box__text">{{description}}</p>
+                        <button class="box__button button" >Contratar</button>
                     </div>
                 </div>
             </div>
-            <footer class="footer">
-                <div class="footer__link">
-                    <a href="">Terminos y condiciones</a>
-                </div>
-                <div class="footer__description">
-                    <p>Desarrollado por Akurey.com | Todos los derechos reservados</p>
-                </div>
-            </footer>
-        </div>
-    </body>
+        {{/companies}}
+    </script>
+
+    <script type="text/javascript">
+        
+               var data = {
+    "companies": [{
+            "name": "Chuck Norris' Bodyguards",
+            "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis.",
+            "rate": "500",
+            "hours": "8",
+            "isCertified": true,
+            "image": "https://gdurl.com/BW3g"
+        },
+        {
+            "name": "Power Rangers Squad",
+            "description": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.",
+            "rate": "100",
+            "hours": "12",
+            "isCertified": false,
+            "image": "https://gdurl.com/rcnX"
+        },
+        {
+            "name": "Kame Security Ltda.",
+            "description": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.",
+            "rate": "150",
+            "hours": "10",
+            "isCertified": false,
+            "image": "https://gdurl.com/V1w0"
+        },
+        {
+            "name": "Capsule Corp.",
+            "description": "Muy lejos, más allá de las montañas de palabras, alejados de los países de las vocales y las consonantes, viven los textos simulados. Viven aislados en casas de letras, en la costa de la semántica, un gran océano de lenguas.",
+            "rate": "125",
+            "hours": "12",
+            "isCertified": true,
+            "image": "https://gdurl.com/vycp"
+        },
+        {
+            "name": "Raptor Squad",
+            "description": "Y, viéndole don Quijote de aquella manera, con muestras de tanta tristeza, le dijo: Sábete, Sancho, que no es un hombre más que otro si no hace más que otro.",
+            "rate": "225",
+            "hours": "8",
+            "isCertified": false,
+            "image": "https://gdurl.com/jej2"
+        },
+        {
+            "name": "Donuts Security",
+            "description": "Reina en mi espíritu una alegría admirable, muy parecida a las dulces alboradas de la primavera, de que gozo aquí con delicia.",
+            "rate": "50",
+            "hours": "12",
+            "isCertified": false,
+            "image": "https://gdurl.com/9xia"
+        },
+        {
+            "name": "S.H.I.E.L.D",
+            "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis.",
+            "rate": "250",
+            "hours": "12",
+            "isCertified": false,
+            "image": "https://gdurl.com/JwFZ"
+        }
+    ]
+};
+                var templateX = $('#template').html();
+                var html = Mustache.to_html(templateX, data);
+                $('#p').html(html);
+    </script>
+    
+</body>
 </html>
