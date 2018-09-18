@@ -1,5 +1,4 @@
-
-var data = {
+{
     "companies": [{
             "name": "Chuck Norris' Bodyguards",
             "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis.",
@@ -57,75 +56,4 @@ var data = {
             "image": "https://gdurl.com/JwFZ"
         }
     ]
-    };
-
-function validar(e) {
-    tecla = (document.all) ? e.keyCode : e.which;
-    if (tecla===13) callPromise();
 }
-
-function promiseC() {
-    return new Promise(function(resolve, reject) {
-    var request = new XMLHttpRequest();
-    request.open('GET', "",true);
-    request.onload = function() {
-        if (request.status === 200) {
-        resolve(request.response);
-        } else {
-        reject(Error("Error"));
-        }
-    };
-    request.onerror = function() {
-        reject(Error('There was a network error.'));
-    };
-    request.send();
-    });
-}
-
-function callPromise(){
-    var userInput = document.getElementById("input").value;
-    promiseC().then(function(response) {
-        showEspecificInfo(userInput);
-    }, function(Error) {
-        console.log(Error);
-        show(data);
-    });
-}
-
-show(data);    
-
-function showEspecificInfo(userInput){
-    if (userInput !== "") {
-        var companieJson = getAgentByName(userInput);
-        if(companieJson !== undefined){
-            var lis = [companieJson];
-            var s = {"companies":[companieJson]};
-            console.log("n " + s);
-            show(s);
-            return;
-        }
-    }
-    
-}
-
-function getAgentByName(name) {
-    var jsonCompañies = data;
-    for (let index = 0; index < jsonCompañies["companies"].length; index++) {
-        const element = jsonCompañies["companies"][index];
-        if(element["name"] === name){
-            return jsonCompañies["companies"][index];
-        }
-    }
-    
-}
-
-function showAll(){
-    show(data);
-}
-var $ = URL("https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.3.2/mustache.min.js");
-function show(dataJ) {
-    var templateX = $('#template').html();
-    var html = Mustache.to_html(templateX, dataJ);
-    $('#p').html(html);
-}
-

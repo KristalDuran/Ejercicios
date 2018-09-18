@@ -25,6 +25,17 @@
         width: 458px;
         height: 44px;
     }
+    &__lens{
+        left: 520px;
+        top: 398px;
+        position: absolute;
+        width: 40px;
+        height: 40px;
+        &:hover{
+            width: 50px;
+            height: 50px;
+        }
+    }
 }
 
 @media screen and (max-width: 768px){
@@ -40,6 +51,10 @@
             width: 350px;
             left: 10px;
             margin-top: 5%;
+        }
+        &__lens{
+            left: 320px;
+            top: 435px;
         }
     }
 }
@@ -66,6 +81,10 @@
             left: 10px;
             top: 467px;
             width: 303px;
+        }
+        &__lens{
+            left: 280px;
+            top: 485px;
         }
     }
 }

@@ -1,11 +1,12 @@
 // Import Gulp and Plumber
-var gulp = require('gulp');
+const gulp = require('gulp');
 
 // SASS compilation task
-var plumber = require('gulp-plumber');
-var sass = require('gulp-sass');
-var concat = require('gulp-concat');
-var cssnano = require('gulp-cssnano');
+const plumber = require('gulp-plumber');
+const sass = require('gulp-sass');
+const concat = require('gulp-concat');
+const cssnano = require('gulp-cssnano');
+
 gulp.task('sass', function () {
 	gulp.src('./src/css/*.scss')
 		.pipe(plumber())
@@ -16,8 +17,8 @@ gulp.task('sass', function () {
 });
 
 // BrowserSync serve task
-var browser = require('browser-sync');
-var reload = browser.reload;
+const browser = require('browser-sync');
+const reload = browser.reload;
 gulp.task('serve', function () {
 	browser({
 		port: 4500,
@@ -33,6 +34,7 @@ gulp.task('serve', function () {
 gulp.task('watch', function () {
 	gulp.watch("./src/css/**", ['sass']);
 	gulp.watch("./src/html/**", ['html']);
+	gulp.watch("./src/js/**", ['js']);
 });
 
 // HTML generation task
@@ -48,6 +50,15 @@ gulp.task('html', function () {
 		}));
 });
 
+gulp.task('js', function () {
+	// var cssContent = fs.readFileSync("./dist/main.css", "utf8");
+	gulp.src(["./src/js/*.js"])
+		// .pipe(inject.after('style amp-custom>', cssContent))
+		.pipe(gulp.dest("./dist/js"))
+		.pipe(reload({
+			stream: true
+		}));
+});
 
 // Default task
-gulp.task('default', ['sass', 'html', 'watch', 'serve']);
+gulp.task('default', ['sass', 'html','js', 'watch', 'serve']);

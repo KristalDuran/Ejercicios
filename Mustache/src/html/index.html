@@ -3,7 +3,8 @@
     <meta charset="utf-8">
     <title>Agentes</title>
     <link rel="stylesheet" href="main.css" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script type="text/javascript" src="../js/main.js"></script>
 </head>
 <body class="page">
     <header class="header">
@@ -11,7 +12,7 @@
         <div class="menu">
             <nav class="menu__nav">
                 <ul class="menu__items">
-                    <li class="menu__item"><a class="menu__item--select menu__item--first " href="#">Directorio de Agentes</a></li>
+                    <li class="menu__item"><a class="menu__item--select menu__item--first " href="#" onclick="showAll()">Directorio de Agentes</a></li>
                     <li class="menu__item"><a class="menu__item--select" href="#">Contacto</a></li>
                     <li class="menu__item"><a class="menu__item--select menu__item--last" href="#">Ingresar</a></li>
                 </ul>
@@ -26,7 +27,8 @@
     <div class="seeker">
         <img class="seeker__image" src="/images/banner.png">
         <h1 class="seeker__title">Los Mejores agentes de seguridad</h1>
-        <input class="seeker__input" placeholder="Buscar por Ubicación">
+        <input class="seeker__input" id="input" placeholder="Buscar por Empresa" onkeypress="validar(event)">
+        <img class="seeker__lens" src="images/lupa.png" onclick ="callPromise()"> 
     </div> 
     <div class="container" id="p">
         
@@ -62,72 +64,6 @@
                 </div>
             </div>
         {{/companies}}
-    </script>
-
-    <script type="text/javascript">
-        
-               var data = {
-    "companies": [{
-            "name": "Chuck Norris' Bodyguards",
-            "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis.",
-            "rate": "500",
-            "hours": "8",
-            "isCertified": true,
-            "image": "https://gdurl.com/BW3g"
-        },
-        {
-            "name": "Power Rangers Squad",
-            "description": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.",
-            "rate": "100",
-            "hours": "12",
-            "isCertified": false,
-            "image": "https://gdurl.com/rcnX"
-        },
-        {
-            "name": "Kame Security Ltda.",
-            "description": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.",
-            "rate": "150",
-            "hours": "10",
-            "isCertified": false,
-            "image": "https://gdurl.com/V1w0"
-        },
-        {
-            "name": "Capsule Corp.",
-            "description": "Muy lejos, más allá de las montañas de palabras, alejados de los países de las vocales y las consonantes, viven los textos simulados. Viven aislados en casas de letras, en la costa de la semántica, un gran océano de lenguas.",
-            "rate": "125",
-            "hours": "12",
-            "isCertified": true,
-            "image": "https://gdurl.com/vycp"
-        },
-        {
-            "name": "Raptor Squad",
-            "description": "Y, viéndole don Quijote de aquella manera, con muestras de tanta tristeza, le dijo: Sábete, Sancho, que no es un hombre más que otro si no hace más que otro.",
-            "rate": "225",
-            "hours": "8",
-            "isCertified": false,
-            "image": "https://gdurl.com/jej2"
-        },
-        {
-            "name": "Donuts Security",
-            "description": "Reina en mi espíritu una alegría admirable, muy parecida a las dulces alboradas de la primavera, de que gozo aquí con delicia.",
-            "rate": "50",
-            "hours": "12",
-            "isCertified": false,
-            "image": "https://gdurl.com/9xia"
-        },
-        {
-            "name": "S.H.I.E.L.D",
-            "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis.",
-            "rate": "250",
-            "hours": "12",
-            "isCertified": false,
-            "image": "https://gdurl.com/JwFZ"
-        }
-    ]
-};
-                var templateX = $('#template').html();
-                var html = Mustache.to_html(templateX, data);
-                $('#p').html(html);
     </script>
     
 </body>
