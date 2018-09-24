@@ -17,13 +17,14 @@
     },
     "homepage": "https://github.com/jcbargo/febrero24#readme",
     "devDependencies": {
+        "browser-sync": "^2.24.6",
         "gulp": "^3.9.1",
+        "gulp-concat": "^2.6.1",
         "gulp-cssnano": "^2.1.2",
+        "gulp-imagemin": "^4.1.0",
+        "gulp-load-plugins": "1.5.0",
         "gulp-plumber": "^1.1.0",
         "gulp-sass": "^3.1.0",
-        "gulp-concat": "^2.6.1",
-        "gulp-load-plugins": "1.5.0",
-        "gulp-imagemin": "^4.1.0",
-        "browser-sync": "^2.24.6"
+        "mustache": "^3.0.0"
     }
 }

@@ -1,65 +1,66 @@
 @import "colors";
 
 .box{
-    
-    margin: 20px;
+    position: relative;
+    margin-bottom: 20px;
+    margin-left: 0px; 
     width: 360px;
     height: 242px;
-    &__se{
+    &__options{
+        margin-top: 0;
         display: flex;
-        flex-wrap: row wrap;
+        flex-wrap: column;
+        &__price{
+            font-size: 14px;
+            font-weight: 900;
+        }
+        &__button{
+            color: $text-white;
+            margin-left: 25px;
+            &:hover{
+                font-size: 18px;
+            }
+        }
     }
     &__container-header{
+        margin-left: 0;
         display: flex;
-        flex-wrap: row;
-    }
-    &__container1{
-        width: 126px;
-        height: 167px;
-        margin: 10px;
-    }
-    &__title{
-        border-bottom: 1px solid $border-gray;
-        font-size: 18px;
-    }
-    &__text{
-        padding: 20px;
-        font-size: 12px;
-    }
-    &__price{
-        font-size: 14px;
-    }
-    &__logo{
-        position: relative;
-        left: 290px;
-        width: 40px;
-        height: 40px;
-    }
-    &__picture{
-        width: 126px;
-        height: 117px;
-    }
-    &__button{
-        color: $text-white;
-        &:hover{
+        flex-wrap: column;
+        &__title{
             font-size: 18px;
+            margin-left: 0;
+        }
+        &__logo{
+            position: absolute;
+            margin-top: 4px;
+            left: 270px;
+            width: 40px;
+            height: 40px;
         }
     }
-}
-
-@media screen and (max-width: 360px){
-    .box{
-        width: 360px;
-        height: 242px;
-    }
-}
-
-@media screen and (max-width: 768px){
-    .box{
-        margin-right: 5px;
-        margin-left: 1px;
+    &__information{
+        margin-top: 0;
+        display: flex;
+        flex-wrap: column;
         &__text{
-            font-size: 14px;
+            position: relative;
+            width: 172px;
+            height: 119px;
+            margin-top: 0;
+            padding-left:  15px;
+            text-align: justify;
+            font-size: 12px;
         }
+        &__picture{
+            width: 126px;
+            height: 117px;
+        }
+    }
+    &__rayita{
+        background: $border-gray;
+        margin-bottom: 10px;
+        margin-top: 0;
+        width: 95%;
+        height: 1px;
     }
 }

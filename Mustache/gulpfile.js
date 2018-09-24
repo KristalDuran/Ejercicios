@@ -60,5 +60,15 @@ gulp.task('js', function () {
 		}));
 });
 
+gulp.task('mustache', function () {
+	// var cssContent = fs.readFileSync("./dist/main.css", "utf8");
+	gulp.src(["./src/mustache/*.mustache"])
+		// .pipe(inject.after('style amp-custom>', cssContent))
+		.pipe(gulp.dest("./dist/mustache"))
+		.pipe(reload({
+			stream: true
+		}));
+});
+
 // Default task
-gulp.task('default', ['sass', 'html','js', 'watch', 'serve']);
+gulp.task('default', ['sass', 'html','js', 'mustache', 'watch', 'serve']);
