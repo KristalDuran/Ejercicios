@@ -4,8 +4,6 @@
     <title>Agentes</title>
     <link rel="stylesheet" href="main.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script type="text/javascript" src="../js/main.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/3.0.0/mustache.min.js"></script>
 </head>
 <body class="page">
     <header class="header">
@@ -13,7 +11,7 @@
         <div class="menu">
             <nav class="menu__nav">
                 <ul class="menu__items">
-                    <li class="menu__item"><a class="menu__item--select menu__item--first " href="#" onclick="showAll()">Directorio de Agentes</a></li>
+                    <li class="menu__item"><a class="menu__item--select menu__item--first " href="#" id="menu-agents">Directorio de Agentes</a></li>
                     <li class="menu__item"><a class="menu__item--select" href="#">Contacto</a></li>
                     <li class="menu__item"><a class="menu__item--select menu__item--last" href="#">Ingresar</a></li>
                 </ul>
@@ -28,8 +26,8 @@
     <div class="seeker">
         <img class="seeker__image" >
         <h1 class="seeker__title">Los Mejores agentes de seguridad</h1>
-        <input class="seeker__input" id="input" placeholder="Buscar por Empresa" onkeypress="validar(event)">
-        <img class="seeker__lens" src="images/lupa.png" onclick ="callPromise()"> 
+        <input class="seeker__input" id="input"placeholder="Buscar por Empresa">
+        <img class="seeker__lens" id="lens" src="images/lupa.png"> 
     </div> 
     <div class="container" id="containerId">
     </div>       
@@ -40,4 +38,6 @@
         <a class="footer__link" href="">Términos y Condiciones</a>
     </footer>  
 </body>
+<script type="text/javascript" src="../js/main.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/3.0.0/mustache.min.js"></script>
 </html>

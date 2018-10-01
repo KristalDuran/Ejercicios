@@ -38,32 +38,26 @@ gulp.task('watch', function () {
 });
 
 // HTML generation task
-// var fs = require("fs");
-// var inject = require('gulp-inject-string');
 gulp.task('html', function () {
-	// var cssContent = fs.readFileSync("./dist/main.css", "utf8");
 	gulp.src("./src/html/*.html")
-		// .pipe(inject.after('style amp-custom>', cssContent))
 		.pipe(gulp.dest("./dist"))
 		.pipe(reload({
 			stream: true
 		}));
 });
 
+//js task
 gulp.task('js', function () {
-	// var cssContent = fs.readFileSync("./dist/main.css", "utf8");
 	gulp.src(["./src/js/*.js"])
-		// .pipe(inject.after('style amp-custom>', cssContent))
 		.pipe(gulp.dest("./dist/js"))
 		.pipe(reload({
 			stream: true
 		}));
 });
 
+//mustache task
 gulp.task('mustache', function () {
-	// var cssContent = fs.readFileSync("./dist/main.css", "utf8");
 	gulp.src(["./src/mustache/*.mustache"])
-		// .pipe(inject.after('style amp-custom>', cssContent))
 		.pipe(gulp.dest("./dist/mustache"))
 		.pipe(reload({
 			stream: true

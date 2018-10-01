@@ -1,21 +1,22 @@
 //const Mustache = require('mustache');
 
 var data = {};
+const URL_JSON = "https://api.myjson.com/bins/uptto";
 
-function validar(e) {
-    tecla = (document.all) ? e.keyCode : e.which;
-    if (tecla===13) callPromise();
+function getKeyPress(e) {
+    key = (document.all) ? e.keyCode : e.which;
+    if (key===13) getAgentsByInput();
 }
 
-function promiseC() {
-    return new Promise(function(resolve, reject) {
+function getPromiseAction() {
+    return new Promise((resolve, reject) => {
     var request = new XMLHttpRequest();
     request.open('GET', "",true);
     request.onload = function() {
         if (request.status === 200) {
-        resolve(request.response);
+            resolve(request.response);
         } else {
-        reject(Error("Error"));
+            reject(Error("Error"));
         }
     };
     request.onerror = function() {
@@ -25,9 +26,9 @@ function promiseC() {
     });
 }
 
-function callPromise(){
+function getAgentsByInput(){
     var userInput = document.getElementById("input").value;
-    promiseC().then(function(response) {
+    getPromiseAction().then(function(response) {
         showEspecificInfo(userInput);
     }, function(Error) {
         console.log(Error);
@@ -35,16 +36,12 @@ function callPromise(){
     });
 }
 
-   
-
 function showEspecificInfo(userInput){
     if (userInput !== "") {
         var companieJson = getAgentByName(userInput);
         if(companieJson !== undefined){
-            var lis = [companieJson];
-            var s = {"companies":[companieJson]};
-            console.log("n " + s);
-            show(s);
+            var listCompanies = {"companies":[companieJson]};
+            show(listCompanies);
             return;
         }
     }
@@ -52,21 +49,17 @@ function showEspecificInfo(userInput){
 }
 
 function getAgentByName(name) {
-    var jsonCompañies = data;
-    for (let index = 0; index < jsonCompañies["companies"].length; index++) {
-        const element = jsonCompañies["companies"][index];
+    
+    for (let index = 0; index < data["companies"].length; index++) {
+        const element = data["companies"][index];
         if(element["name"] === name){
-            return jsonCompañies["companies"][index];
+            return data["companies"][index];
         }
     }
 }
 
-function showAll(){
-    show(data);
-}
-
 function show(dataJ) {
-    const template = fetch('../mustache/template.mustache').then(response => response.text());
+    const template = fetch('../mustache/template.mustache').then(function(response) { return response.text()});
     Promise.all([dataJ,template])
     .then(response => {
 
@@ -77,14 +70,14 @@ function show(dataJ) {
 
         var output = Mustache.render(resolvedTemplate, resolvedData);
 
-        return document.getElementById('containerId').innerHTML = output;
+        document.getElementById('containerId').innerHTML = output;
 
     }).catch(error => console.log('Unable to get all template data: ', error.message));
 }
 
 function getJson(){
     var client = new XMLHttpRequest()
-    client.open("GET", "https://api.myjson.com/bins/uptto");
+    client.open("GET", URL_JSON);
     client.onreadystatechange = function() { 
         data = JSON.parse(client.responseText);
         show(data); 
@@ -93,4 +86,15 @@ function getJson(){
 }
 
 getJson();
- 
+
+document.getElementById("lens").onclick = function() {
+    getAgentsByInput();
+};
+
+document.getElementById("input").onkeypress = function(event){
+    getKeyPress(event);
+};
+
+document.getElementById("menu-agents").onclick = function() {
+    show(data);
+};
