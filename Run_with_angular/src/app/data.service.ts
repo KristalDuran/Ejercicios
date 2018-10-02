@@ -8,13 +8,13 @@ import { BehaviorSubject } from 'rxjs';
 
 export class DataService {
   private URL_DATA = 'https://api.myjson.com/bins/uptto';
-  private dataSource = new BehaviorSubject<any>({companies:[]});
+  private dataSource = new BehaviorSubject<any>({companies: [] });
   public currentData = this.dataSource.asObservable();
   private agents: any = {};
 
   constructor(private http: HttpClient) { }
 
-  getAgents(){
+  getAgents() {
     const data_URL = this.http.get(this.URL_DATA);
     this.changeData(data_URL);
     data_URL.subscribe(data => this.agents = data);
@@ -24,11 +24,11 @@ export class DataService {
   changeData(data: any) {
     this.dataSource.next(data);
   }
-  
+
   public filter(userInput) {
     userInput = userInput.toUpperCase();
     const filteredData = this.agents.companies.filter((agent => agent.name.toUpperCase().includes(userInput)));
-    this.changeData(filteredData);
+    this.changeData({'companies': filteredData});
   }
 
 }

@@ -1,5 +1,5 @@
 import { Component, OnInit, ElementRef, ViewChild } from '@angular/core';
-import { DataService } from "../data.service";
+import { DataService } from '../data.service';
 
 @Component({
   selector: 'app-seeker',
@@ -12,13 +12,12 @@ export class SeekerComponent implements OnInit {
 
   @ViewChild ('input')
   public inputText: ElementRef;
-  
+
   ngOnInit() {
   }
- 
+
   public keyUp(event: any): void {
     const filterValue = this.inputText.nativeElement.value;
-    if(filterValue.length >= 3)
-      this.dataService.filter(filterValue);
+    if ( filterValue.length >= 3) { this.dataService.filter( filterValue ); }
   }
 }

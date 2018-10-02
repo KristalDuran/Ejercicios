@@ -11,14 +11,14 @@ export class AgentsComponent implements OnInit {
 
   agents: any = {};
 
-  constructor(private data: DataService) { }
+  constructor(private data: DataService) {}
 
   ngOnInit() {
     this.data.getAgents().subscribe(data => this.agents = data);
     this.data.currentData.subscribe(
       data => {
-        this.agents = {"companies":data};
+        this.agents = data;
       }
-    ); 
+    );
   }
 }
