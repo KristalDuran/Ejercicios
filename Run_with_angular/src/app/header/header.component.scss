@@ -1,0 +1,106 @@
+.header{
+    position: relative;
+    float: left;
+    width: 100%;
+    height: 100px;
+    background: black;
+    font-family: Arial, Helvetica, sans-serif;
+    &__logo{
+        position: relative;
+        float: left;
+        left: 15px;
+        top: 20px;
+        width: 200px;
+        height: 50px;
+    }
+
+}
+
+@media screen and (min-width: 361px){
+    .header{
+        &__logo{
+            margin-left: 60px;
+            left: 10px;
+            width: 250px;
+        }
+    }
+}
+
+%data-box{
+    position: absolute;
+    background: white;
+    width: 53px;
+}
+
+.menu{
+    margin-right: 3.8%;
+    float: left;
+    min-height: 1px;
+    &__items{
+        display: none;
+    }
+    &__figure{
+        display: block;
+        position: relative;
+        margin-left: 80%;
+        &--first{
+            @extend %data-box;
+            height: 9px;
+            top: 0px;
+        }
+        &--second{
+            @extend %data-box;
+            height: 9px;
+            top: 15px;
+        }
+        &--third{
+            @extend %data-box;
+            height: 9px;
+            top: 30px;
+        }
+    }
+    &__nav{
+        position: absolute;
+        width: 540px;
+        top: 15px;
+        right: 5px;
+    }
+}
+
+
+
+@media screen and (min-width: 768px){
+    .menu{
+        &__figure{
+            display: none;
+        }
+        &__items{
+            list-style: none;
+            display: flex;
+            flex-wrap: row wrap;        
+        }
+        &__item{
+            margin-left: 12px;
+            line-height: normal;
+            &--select{
+                font-size: 17px;
+                color: white;
+                margin-right: 6px;
+                text-decoration: none;
+                &:hover{
+                    color: purple;
+                } 
+            }
+            &--first{
+                border-bottom: 5px solid white;
+                padding-bottom: 2px;
+            }
+            &--last{
+                margin-left: 60px;
+                
+            }
+        }
+        
+    }
+    
+}

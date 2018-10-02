@@ -1,0 +1,17 @@
+  <div class="content" *ngIf = 'agents'>
+    <div class="box" *ngFor = 'let agent of agents.companies'>
+        <div class="box__container-header">
+            <h3 class="box__container-header__title">{{agent.name}}</h3>
+            <img class="box__container-header__logo" *ngIf="agent.isCertified" src="../../assets/images/certified.png">
+        </div>
+        <div class="box__rayita"></div>
+        <div class="box__information">
+            <img class="box__information__picture" src="{{agent.image}}">
+            <p class="box__information__text">{{agent.description}}</p>
+        </div>
+        <div class="box__options">
+            <p class="box__options__price">Desde: {{agent.rate}} / {{agent.hours}} horas</p>
+            <app-button></app-button>
+        </div>
+    </div>
+  </div> 

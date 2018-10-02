@@ -1,0 +1,25 @@
+.footer{
+    
+    height: 90px;
+    background: black;
+    padding-left: 60px;
+    padding-right: 30px;
+    padding-top: 10px;
+    display: flex;
+    flex-wrap: row;
+    color: white;
+    font-size: 14px;
+    &__author{
+        text-align: left;
+        left: 225px;
+    }
+    &__link{
+        text-align: right;
+        margin-left: 30%;  
+        color: white;
+        &:hover{
+            font-size: 18px;
+        }
+    }
+}
+

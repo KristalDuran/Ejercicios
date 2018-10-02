@@ -1,0 +1,89 @@
+.seeker{
+    left: 0px;
+    &__image{
+        background-image: url(../../assets/images/banner-mobile.png);
+        background-size: cover;
+        background-position: center, center;
+        height: 304px;
+        width: 100%;
+    }
+    &__title{
+        left: 27px;
+        top: 396px;
+        color: black;
+        font-size: 24px;
+        position: absolute;
+    }
+    &__input{
+        height: 44px;
+        font-family: Arial, Helvetica, sans-serif;
+        margin-top: 10px;
+        left: 10px;
+        top: 467px;
+        font-size: 18px;
+        padding-left: 10px;
+        position: absolute;
+        border-radius: 20px;
+        width: 303px;
+    }
+    &__lens{
+        left: 280px;
+        top: 485px;
+        position: absolute;
+        width: 40px;
+        height: 40px;
+        &:hover{
+            width: 50px;
+            height: 50px;
+        }
+    }
+}
+
+@media screen and (min-width: 361px){
+    .seeker{
+
+        &__image{
+            height: 428px;
+            background-image: url(../../assets/images/banner.png);
+        }
+        &__title{
+            left: 20px;
+            color: white;
+            font-size: 32px;
+            top: 306px;
+            width: 320px;
+        }
+        &__input{
+            width: 320px;
+            left: 25px;  
+            top: 394px;
+        }
+        &__lens{
+            left:305px;
+            top: 410px;
+        }
+    }
+}
+
+@media screen and (min-width: 769px){
+    .seeker{
+        &__image{
+            height: 600px;
+            background-image: url(../../assets/images/banner.png);
+        }
+        &__title{
+            width: 600px;
+            left: 92px;
+            font-size: 36px;
+            margin-bottom: 5px;
+        }
+        &__input{
+            left: 95px;
+            width: 458px;
+        }
+        &__lens{
+            left: 511px;
+            top: 410px;
+        }
+    }
+}
