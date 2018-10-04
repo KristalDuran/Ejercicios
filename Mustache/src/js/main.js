@@ -2,10 +2,11 @@
 
 var data = {};
 const URL_JSON = "https://api.myjson.com/bins/uptto";
+const KEY_ENTER = 13;
 
 function getKeyPress(e) {
     key = (document.all) ? e.keyCode : e.which;
-    if (key===13) getAgentsByInput();
+    if (key===KEY_ENTER) getAgentsByInput();
 }
 
 function getPromiseAction() {
