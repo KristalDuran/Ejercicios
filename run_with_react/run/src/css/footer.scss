@@ -1,0 +1,25 @@
+@import "colors";
+
+.footer {
+  position: relative;
+  height: 90px;
+  background: $background-black;
+  padding-left: 60px;
+  padding-right: 30px;
+  padding-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  color: $text-white;
+  font-size: 14px;
+  &__author {
+    left: 225px;
+  }
+  &__link {
+    text-align: right;
+    margin-left: 50%;
+    color: $text-white;
+    &:hover {
+      font-size: 18px;
+    }
+  }
+}

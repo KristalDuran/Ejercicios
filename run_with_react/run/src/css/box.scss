@@ -1,0 +1,70 @@
+@import "colors";
+
+.box {
+  position: relative;
+  margin-bottom: 20px;
+  margin-left: 3%;
+  margin-top: 2%;
+  width: 360px;
+  height: 242px;
+  &__options {
+    margin-top: 15px;
+    display: flex;
+    flex-wrap: column;
+    &__price {
+      font-size: 14px;
+      font-weight: 900;
+    }
+    &__button {
+      color: $text-white;
+      margin-left: 25px;
+      &:hover {
+        font-size: 18px;
+      }
+    }
+  }
+  &__container-header {
+    margin-left: 0;
+    display: flex;
+    flex-wrap: column;
+    &__title {
+      font-size: 18px;
+      margin-left: 0;
+    }
+    &__logo {
+      background-image: url(../images/certified.png);
+      background-size: 35px 35px;
+      background-repeat: no-repeat;
+      position: absolute;
+      margin-top: 4px;
+      left: 270px;
+      width: 35px;
+      height: 35px;
+    }
+  }
+  &__information {
+    margin-top: 0;
+    display: flex;
+    flex-wrap: column;
+    &__text {
+      position: relative;
+      width: 172px;
+      height: 119px;
+      margin-top: 0;
+      padding-left: 15px;
+      text-align: justify;
+      font-size: 12px;
+    }
+    &__picture {
+      width: 126px;
+      height: 117px;
+    }
+  }
+  &__upper-line {
+    background: $border-gray;
+    margin-bottom: 10px;
+    margin-top: 0;
+    width: 95%;
+    height: 1px;
+  }
+}
