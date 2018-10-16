@@ -1,5 +1,4 @@
 import React from "react";
-import Agent from "./Agent";
 import Footer from "./Footer";
 import Header from "./Header";
 import Seeker from "./Seeker";
@@ -11,7 +10,6 @@ class App extends React.Component {
       <div className="containerP">
         <Header />
         <Seeker />
-        <Agent />
         <Footer />
       </div>
     );
