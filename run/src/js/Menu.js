@@ -26,10 +26,10 @@ class Menu extends React.Component {
               </a>
             </li>
           </ul>
-          <ul className="menu__figure">
-            <li className="menu__figure--first" />
-            <li className="menu__figure--second" />
-            <li className="menu__figure--third" />
+          <ul className="menu__figures">
+            <li className="menu__figure" />
+            <li className="menu__figure" />
+            <li className="menu__figure" />
           </ul>
         </nav>
       </div>

@@ -9,9 +9,8 @@ class Seeker extends React.Component {
     this.state = {
       data: {}
     };
-    this.updateState = this.updateState.bind(this);
   }
-  updateState(e) {
+  updateState = (e)  => {
     var value_user_input = e.target.value;
     if (value_user_input.length >= 3) {
       value_user_input = value_user_input.toUpperCase();
@@ -37,7 +36,6 @@ class Seeker extends React.Component {
     this.getDataFromURL();
   }
   render() {
-    if (this.state.data.companies) {
       return (
         <div>
           <div className="seeker">
@@ -50,28 +48,17 @@ class Seeker extends React.Component {
               onChangeCapture={this.updateState}
             />
           </div>
-          <div className="container">
-            {this.state.data.companies.map((agent, i) => (
-              <Box key={i} data={agent} />
-            ))}
-          </div>
+          {this.state.data.companies ? 
+            <div className="container">
+              {this.state.data.companies.map((agent, i) => (
+                <Box key={i} data={agent} />
+              ))}
+            </div>
+            : null
+          }
         </div>
       );
-    }
-    return (
-      <div>
-        <div className="seeker">
-          <img className="seeker__image" />
-          <h1 className="seeker__title">Los Mejores agentes de seguridad</h1>
-          <input
-            className="seeker__input"
-            id="input"
-            placeholder="Buscar por Empresa"
-            onChangeCapture={this.updateState}
-          />
-        </div>
-      </div>
-    );
+    
   }
 }
 
